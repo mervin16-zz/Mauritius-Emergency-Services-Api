@@ -14,7 +14,8 @@ All responses will have the form
 
 ### Get services by language
 
-**Available Languages**
+***Available Languages***
+
 English: `GET /en/{other parameters}`
 
 French: `GET /fr/{other parameters}`
@@ -51,7 +52,7 @@ French: `GET /fr/{other parameters}`
 ```
 
 - `404 NOT FOUND` on failure
-- 
+  
 ```json
 {
     "services": [],
@@ -60,7 +61,7 @@ French: `GET /fr/{other parameters}`
 }
 ```
 
-### Get single service
+### Get a single service
 
 **Definition**
 `GET /en/service/{identifier}`
@@ -85,7 +86,7 @@ French: `GET /fr/{other parameters}`
 ```
 
 - `404 NOT FOUND` if no services found
-- 
+  
 ```json
 {
     "services": [],
