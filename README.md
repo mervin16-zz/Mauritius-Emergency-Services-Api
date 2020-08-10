@@ -1,5 +1,7 @@
 # Mauritius Emergency Services
 
+Mauritius Emergency Services is an API that provides a list of emergency phone services in Mauritius.
+
 ## Usage
 
 All responses will have the form
@@ -93,4 +95,11 @@ French: `GET /fr/{other parameters}`
     "message" : "No services found under this identifier.",
     "success" : false
 }
+```
+
+## License
+
+```
+Copyright Mervin Hemaraju
+
 ```
