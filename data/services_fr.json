@@ -1,0 +1,13 @@
+[{
+        "identifier": "police-direct-line-1",
+        "name": "Police - Ligne directe 1",
+        "icon": "https://www.icon.com/link_to_icon",
+        "number": 999
+    },
+    {
+        "identifier": "police-direct-line-2",
+        "name": "Police - Ligne directe 2",
+        "icon": "https://www.icon.com/link_to_icon",
+        "number": 112
+    }
+]

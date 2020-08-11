@@ -2,6 +2,15 @@
 
 Mauritius Emergency Services is an API that provides a list of emergency phone services in Mauritius.
 
+## Installation
+
+To run the API, install the following dependencies:
+`pip install flask-restful`
+
+## Base URL
+
+Coming soon (will be deployed on Heroku)...
+
 ## Usage
 
 All responses will have the form
