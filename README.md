@@ -50,12 +50,14 @@ French: `GET /fr/{other parameters}`
         {
             "identifier": "police-direct-line-1",
             "name": "Police Direct Line 1",
+            "type": "SECURITY",
             "icon": "https://www.icon.com/link_to_icon",
             "number": 999
         },
         {
             "identifier": "police-direct-line-2",
             "name": "Police Direct Line 2",
+            "type": "SECURITY",
             "icon": "https://www.icon.com/link_to_icon",
             "number": 112
         }
@@ -90,6 +92,7 @@ French: `GET /fr/{other parameters}`
         {
             "identifier": "police-direct-line-1",
             "name": "Police Direct Line 1",
+            "type": "SECURITY",
             "icon": "https://www.icon.com/link_to_icon",
             "number": 999
         }

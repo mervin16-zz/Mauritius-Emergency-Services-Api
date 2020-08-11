@@ -1,6 +1,7 @@
 from flask import Flask, abort
 from flask_restful import Resource, Api
 import json
+from messages import Message
 
 # A list of the available json file in each language mapping its path
 json_file = {"en": "data/services_en.json", "fr": "data/services_fr.json"}
@@ -15,11 +16,7 @@ api = Api(app)
 @app.errorhandler(404)  # Handling HTTP 404 NOT FOUND
 def page_not_found(e):
     return (
-        {
-            "services": [],
-            "message": "No services found under this identifier.",
-            "success": False,
-        },
+        Message.content_not_found(),
         404,
     )
 
@@ -27,11 +24,7 @@ def page_not_found(e):
 @app.errorhandler(400)  # Handling HTTP 400 BAD REQUEST
 def page_bad_request(e):
     return (
-        {
-            "services": [],
-            "message": "Your browser sent a request that this server could not understand.",
-            "success": False,
-        },
+        Message.content_bad_request(),
         404,
     )
 
@@ -48,18 +41,11 @@ class Service(Resource):
             )
             if service:
                 return (
-                    {"services": [service], "message": "", "success": True,},
+                    Message.content_service(service),
                     200,
                 )
             else:
-                return (
-                    {
-                        "services": [],
-                        "message": "No services found under this identifier.",
-                        "success": False,
-                    },
-                    404,
-                )
+                abort(404)
 
 
 # The Services class which returns
@@ -71,7 +57,7 @@ class Services(Resource):
             services = json.load(services_file)
             # Returns the output in the correct format
             return (
-                {"services": services, "message": "", "success": True},
+                Message.content_services(services),
                 200,
             )  # 200 OK HTTP VERB
 
