@@ -1,4 +1,4 @@
-from flask import Flask, abort
+from flask import Flask
 from flask_restful import Resource, Api
 import json
 from messages import Message
@@ -45,7 +45,10 @@ class Service(Resource):
                     200,
                 )
             else:
-                abort(404)
+                return (
+                    Message.content_not_found(),
+                    404,
+                )
 
 
 # The Services class which returns
