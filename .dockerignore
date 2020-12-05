@@ -1,0 +1,11 @@
+# Virtual environments
+venv/
+
+# Python Cache
+__pycache__/
+
+# Heroku Procfile
+Procfile
+
+# VS Code
+.vscode/
