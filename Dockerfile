@@ -1,6 +1,5 @@
-
-# Use the python 3.8 alpine image container image
-FROM python:3.8-alpine
+# Using python 3.8 in Alpine
+FROM python:3.8-alpine3.11
 
 # Set the working directory to /app
 WORKDIR /app
@@ -8,11 +7,20 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 ADD . /app
 
-# Install the dependencies
+# Run an update
+RUN apk update
+
+# Dependencies for uWSGI
+RUN apk add python3-dev build-base linux-headers pcre-dev
+
+# Install the dependencies from requirements
 RUN pip install -r requirements.txt
 
-# tell the port number the container should expose
+# In case bash is needed
+#RUN apk add --no-cache bash
+
+# Tell the port number the container should expose
 EXPOSE 8081
 
-# run the command
-ENTRYPOINT ["python", "app.py"]
+# Run the command
+ENTRYPOINT ["uwsgi", "app.ini"]
