@@ -4,15 +4,13 @@ Mauritius Emergency Services is an API that provides a list of emergency phone s
 
 ## Installation
 
-To run the API, install the following dependencies:
+To run the API locally, you can either build and run the Dockerfile or install the following dependencies and launch the app on your server:
 
-`pip install flask`
-
-`pip install flask-restful`
+`pip install -r requirements.txt`
 
 ## Base URL
 
-`https://mauritius-emergency-services.herokuapp.com/`
+`https://mes.th3pl4gu3.com/`
 
 ## Usage
 
@@ -33,7 +31,6 @@ All responses will have the form
 English: `GET /en/{other parameters}`
 
 French: `GET /fr/{other parameters}`
-
 
 ### List all services
 
@@ -68,7 +65,7 @@ French: `GET /fr/{other parameters}`
 ```
 
 - `404 NOT FOUND` on failure
-  
+
 ```json
 {
     "services": [],
@@ -103,7 +100,7 @@ French: `GET /fr/{other parameters}`
 ```
 
 - `404 NOT FOUND` if no services found
-  
+
 ```json
 {
     "services": [],

@@ -9,3 +9,9 @@ Procfile
 
 # VS Code
 .vscode/
+
+# Github Workflows
+.github/
+
+# Unit Tests
+tests/
