@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  mes:
+    container_name: mes_py
+    image: mes:1.2
+    build: ./
+    networks:
+      - mes_net
+    ports:
+      - 8081:8081
+    restart: always
+
+networks:
+  mes_net:
+    name: mes_network
+    driver: bridge

@@ -7,14 +7,8 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 ADD . /app
 
-# Run an update
-RUN apk update
-
-# Dependencies for uWSGI
-RUN apk add python3-dev build-base linux-headers pcre-dev
-
-# Install the dependencies from requirements
-RUN pip install -r requirements.txt
+# Dependencies
+RUN apk add python3-dev build-base linux-headers pcre-dev && pip install -r requirements.txt && apk update
 
 # In case bash is needed
 #RUN apk add --no-cache bash
