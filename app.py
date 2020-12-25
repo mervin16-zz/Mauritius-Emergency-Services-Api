@@ -29,4 +29,4 @@ api.add_resource(Services, "/<string:lang>/services")
 api.add_resource(Service, "/<string:lang>/service/<string:identifier>")
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8081)
+    app.run(host="0.0.0.0")
