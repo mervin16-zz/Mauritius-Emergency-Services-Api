@@ -1,9 +1,12 @@
 from flask_restful import Resource
 import json
-from messages.messages import Message
+from app.messages.messages import Message
 
 # A list of the available json file in each language mapping its path
-json_file = {"en": "data/services_en.json", "fr": "data/services_fr.json"}
+json_file = {
+    "en": "app/v0_1/data/services_en.json",
+    "fr": "app/v0_1/data/services_fr.json",
+}
 # The default path if language doesn't math any of them
 json_def = "data/services_en.json"
 
