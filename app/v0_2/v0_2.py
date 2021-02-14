@@ -10,5 +10,6 @@ v0_2_api = Api(v0_2_blueprint)
 
 
 # Define API Routes
-v0_2_api.add_resource(services.Services, "/<string:lang>/services")
-v0_2_api.add_resource(services.Service, "/<string:lang>/service/<string:identifier>")
+v0_2_api.add_resource(services.AllServices, "/<string:lang>/services")
+v0_2_api.add_resource(services.OneService, "/<string:lang>/service/<string:identifier>")
+v0_2_api.add_resource(services.EmergencyOnly, "/<string:lang>/services/emergencies")

@@ -23,6 +23,6 @@ def page_not_found(e):
 def page_bad_request(e):
     return (
         MSG.Message.CONTENT_BAD_REQUEST,
-        404,
+        400,
     )
 

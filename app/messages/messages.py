@@ -15,7 +15,7 @@ class Message:
     @staticmethod
     def content_service(service):
         return {
-            "services": [service],
+            "services": service,
             "message": "",
             "success": True,
         }

@@ -4,7 +4,7 @@ services:
   mes:
     container_name: mes
     build: ./
-    image: "mervin16/mes:1.2.1"
+    image: "docker.pkg.github.com/mervin16/mauritius-emergency-services-api/mes:1.2.2"
     networks:
       - mes_net
     expose:
