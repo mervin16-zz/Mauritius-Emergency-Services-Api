@@ -4,8 +4,8 @@ from app.messages.messages import Message
 
 # A list of the available json file in each language mapping its path
 json_file = {
-    "en": "app/v0_1/data/services_en.json",
-    "fr": "app/v0_1/data/services_fr.json",
+    "en": "/app/data/v0_1/services_en.json",
+    "fr": "/app/data/v0_1/services_fr.json",
 }
 # The default path if language doesn't math any of them
 json_def = "app/v0_1/services_en.json"

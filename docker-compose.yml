@@ -7,6 +7,8 @@ services:
     image: "docker.pkg.github.com/mervin16/mauritius-emergency-services-api/mes:1.2.1"
     networks:
       - mes_net
+    volumes:
+      - ./data:/app/data
     expose:
       - 8081
     restart: always

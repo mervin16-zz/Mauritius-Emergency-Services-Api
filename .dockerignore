@@ -15,3 +15,12 @@ Procfile
 
 # Unit Tests
 tests/
+
+# Data file
+data/
+
+# Log File
+log/
+
+# Nginx File
+nginx/
