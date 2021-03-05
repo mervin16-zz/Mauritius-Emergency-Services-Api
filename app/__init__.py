@@ -1,14 +1,16 @@
 from flask import Flask
-import app.v0_1.v0_1 as V0_1
-import app.v0_2.v0_2 as V0_2
+import app.api.v0_1.v0_1 as V0_1
+import app.api.v0_2.v0_2 as V0_2
+import app.web.web as Web
 import app.messages.messages as MSG
 
 # Create a Flask Application
 app = Flask(__name__)
 
-# Register Blueprints versioning
-app.register_blueprint(V0_1.v0_1_blueprint, url_prefix="/v0.1")
-app.register_blueprint(V0_2.v0_2_blueprint, url_prefix="/v0.2")
+# Register Blueprints
+app.register_blueprint(V0_1.v0_1_blueprint, url_prefix="/api/v0.1")
+app.register_blueprint(V0_2.v0_2_blueprint, url_prefix="/api/v0.2")
+app.register_blueprint(Web.web, url_prefix="/web")
 
 # Error Handlers
 @app.errorhandler(404)  # Handling HTTP 404 NOT FOUND
