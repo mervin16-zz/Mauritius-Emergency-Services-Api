@@ -35,12 +35,6 @@
     <!-- Template Main CSS File -->
     <link href="{{ url_for('web.static', filename='css/style.css') }}" rel="stylesheet">
 
-    <!-- =======================================================
-  * Template Name: Bikin - v4.0.1
-  * Template URL: https://bootstrapmade.com/bikin-free-simple-landing-page-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -49,7 +43,13 @@
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center justify-content-between">
 
-            <h1 class="logo"><a href="index.html">Bikin</a></h1>
+            <h1 class="logo">
+                <a href="index.html">
+                    M<span>auritius</span>
+                    E<span>mergency</span>
+                    S<span>ervices</span>
+                </a>
+            </h1>
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href="index.html" class="logo"><img src="{{ url_for('web.static', filename='img/logo.png') }}" alt="" class="img-fluid"></a>-->
 
@@ -58,9 +58,23 @@
                     <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                     <li><a class="nav-link scrollto" href="#about">About</a></li>
                     <li><a class="nav-link scrollto" href="#services">Services</a></li>
-                    <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-                    <li><a class="nav-link scrollto" href="#team">Team</a></li>
-                    <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
+                    <li><a class="nav-link scrollto" href="#developer">Developer</a></li>
+                    <li class="dropdown"><a href="#"><span>API</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li>
+                                <a href="https://github.com/mervin16/Mauritius-Emergency-Services-Api/wiki"
+                                    target="__blank">Documentation</a>
+                            </li>
+                            <li>
+                                <a href="https://mes.th3pl4gu3.com/" target="__blank">Endpoint</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/mervin16/Mauritius-Emergency-Services-Api/"
+                                    target="__blank">Github
+                                    Repository</a>
+                            </li>
+                        </ul>
+                    </li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
@@ -81,24 +95,26 @@
                 <div class="row">
 
                     <div class="col-lg-3 col-md-6 footer-contact">
-                        <h3>Bikin</h3>
+                        <h3>MES</h3>
                         <p>
-                            A108 Adam Street <br>
-                            New York, NY 535022<br>
-                            United States <br><br>
-                            <strong>Phone:</strong> +1 5589 55488 55<br>
-                            <strong>Email:</strong> info@example.com<br>
+                            Developed with love <br />
+                            in Mauritius <br /><br />
+
+                            <strong>Email:</strong> th3pl4gu33@gmail.com<br>
                         </p>
                     </div>
 
                     <div class="col-lg-5 col-md-6 footer-links">
                         <h4>Useful Links</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#home">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a
+                                    href="https://github.com/mervin16/Mauritius-Emergency-Services-Api/"
+                                    target="__blank">Github Repository</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#" target="__blank">Privacy
+                                    policy</a></li>
                         </ul>
                     </div>
 
