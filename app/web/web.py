@@ -12,3 +12,7 @@ web = Blueprint("web", __name__, static_folder="static", template_folder="templa
 def home_view():
     return HTML("index.html")
 
+@web.route("/privacy")
+def privacy_view():
+    return HTML("privacy.html")
+
