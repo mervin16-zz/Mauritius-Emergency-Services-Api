@@ -4,11 +4,13 @@ services:
   mes:
     container_name: mes
     build: ./
-    image: "docker.pkg.github.com/mervin16/mauritius-emergency-services-api/mes:1.2.1"
+    image: "docker.pkg.github.com/mervin16/mauritius-emergency-services-api/mes:1.2.4"
     networks:
       - mes_net
     volumes:
       - ./data:/app/data
+    env_file:
+      - config_local.env
     expose:
       - 8081
     restart: always
