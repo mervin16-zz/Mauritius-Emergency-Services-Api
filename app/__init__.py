@@ -3,6 +3,7 @@ import app.api.v0_1.v0_1 as V0_1
 import app.api.v0_2.v0_2 as V0_2
 import app.web.web as Web
 import app.messages.messages as MSG
+import os
 
 # Create a Flask Application
 app = Flask(__name__)
@@ -11,6 +12,14 @@ app = Flask(__name__)
 app.register_blueprint(V0_1.v0_1_blueprint, url_prefix="/api/v0.1")
 app.register_blueprint(V0_2.v0_2_blueprint, url_prefix="/api/v0.2")
 app.register_blueprint(Web.web, url_prefix="/web")
+
+# SMTP Settings
+app.config["MAIL_SERVER"] = "smtp.gmail.com"
+app.config["MAIL_PORT"] = 587
+app.config["MAIL_USERNAME"] = os.environ["MAIL_USERNAME"]
+app.config["MAIL_PASSWORD"] = os.environ["MAIL_PASSWORD"]
+app.config["MAIL_USE_TLS"] = True
+app.config["MAIL_USE_SSL"] = False
 
 # Error Handlers
 @app.errorhandler(404)  # Handling HTTP 404 NOT FOUND

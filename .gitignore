@@ -66,7 +66,7 @@ instance/
 .webassets-cache
 
 # Scrapy stuff:
-.scrapy
+*.scrapy
 
 # Sphinx documentation
 docs/_build/
@@ -105,8 +105,8 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
-.venv
+*.env
+*.venv
 env/
 venv/
 ENV/
@@ -114,11 +114,11 @@ env.bak/
 venv.bak/
 
 # Spyder project settings
-.spyderproject
-.spyproject
+*.spyderproject
+*.spyproject
 
 # Rope project settings
-.ropeproject
+*.ropeproject
 
 # mkdocs documentation
 /site
