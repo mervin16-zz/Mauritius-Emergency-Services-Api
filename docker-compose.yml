@@ -12,14 +12,14 @@ services:
     env_file:
       - config_local.env
     expose:
-      - 8081
+      - 5000
     restart: always
 
   nginx_mes:
     image: nginx
     container_name: nginx_mes
     ports:
-      - "8081:80"
+      - "5000:80"
     networks:
       - mes_net
     volumes:
