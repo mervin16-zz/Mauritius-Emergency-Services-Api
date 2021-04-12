@@ -592,52 +592,6 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Steps
---------------------------------------------------------------*/
-.steps {
-  padding-top: 20px;
-}
-
-.steps .row {
-  overflow: hidden;
-}
-
-.steps .content-item {
-  padding: 40px;
-  border-left: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  margin: -1px;
-}
-
-.steps .content-item span {
-  display: block;
-  font-size: 24px;
-  font-weight: 400;
-  color: #f75f5f;
-}
-
-.steps .content-item h4 {
-  font-size: 28px;
-  font-weight: 400;
-  padding: 0;
-  margin: 20px 0;
-  color: #220000;
-}
-
-.steps .content-item p {
-  color: #aaaaaa;
-  font-size: 15px;
-  margin: 0;
-  padding: 0;
-}
-
-@media (max-width: 768px) {
-  .steps .content-item {
-    padding: 40px 0;
-  }
-}
-
-/*--------------------------------------------------------------
 # Developer
 --------------------------------------------------------------*/
 .developer {
