@@ -1,6 +1,6 @@
-from flask import Flask
-import app.api.v0_1.v0_1 as V0_1
+from flask import Flask, redirect,url_for
 import app.api.v0_2.v0_2 as V0_2
+import app.api.v1_0.v1_0 as V1_0
 import app.web.web as Web
 import app.messages.messages as MSG
 import os
@@ -9,8 +9,8 @@ import os
 app = Flask(__name__)
 
 # Register Blueprints
-app.register_blueprint(V0_1.v0_1_blueprint, url_prefix="/api/v0.1")
 app.register_blueprint(V0_2.v0_2_blueprint, url_prefix="/api/v0.2")
+app.register_blueprint(V1_0.v1_0_blueprint, url_prefix="/api/v1")
 app.register_blueprint(Web.web, url_prefix="/web")
 
 # SMTP Settings
@@ -20,6 +20,12 @@ app.config["MAIL_USERNAME"] = os.environ["MAIL_USERNAME"]
 app.config["MAIL_PASSWORD"] = os.environ["MAIL_PASSWORD"]
 app.config["MAIL_USE_TLS"] = True
 app.config["MAIL_USE_SSL"] = False
+
+# Redirect to the correct web page by default
+@app.route("/")
+@app.route("/web")
+def page_web():
+    return redirect(url_for("web.home_view"))
 
 # Error Handlers
 @app.errorhandler(404)  # Handling HTTP 404 NOT FOUND
