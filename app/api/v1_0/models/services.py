@@ -10,7 +10,7 @@ json_file = {
 }
 
 # The default path if language doesn't math any of them
-json_def = "data/v0_2/services_en.json"
+json_def = "data/v1_0/services_en.json"
 
 # The Service class returns a single
 # item from the give parameter
